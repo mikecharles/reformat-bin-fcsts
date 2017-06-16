@@ -1,0 +1,21 @@
+---
+filename-vars:
+  tmean: T2m
+  precip: prec
+  500hgt: gh500
+grib-vars:
+  tmean: 2T
+  precip: TP
+grib-levs:
+  tmean: sfc
+  precip: sfc
+input-files:
+  geogrid-name: 0.5deg-global-center-aligned
+  num-members: 51
+  num-fhrs: 65
+  fhr-int: 12
+  dtype: '>f'
+  yrev: True
+output-files:
+  geogrid-name: 1deg-global
+...
