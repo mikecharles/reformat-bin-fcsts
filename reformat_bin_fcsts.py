@@ -92,11 +92,7 @@ for f in range(num_fhrs):
     for m in range(num_members):
         member = f'{list(range(num_members))[m]:02d}'
         # Get a slice of the data and interpolate to the output grid size
-        data_slice = interpolate(
-            np.fliplr(
-                data[m][f].reshape((num_y, num_x))
-            ), input_geogrid, output_geogrid
-        )
+        data_slice = interpolate(data[m][f], input_geogrid, output_geogrid)
         # Render output file name
         kwargs = {
             'fhr': fhr,
